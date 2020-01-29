@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserPage">
+
+    <LinearLayout
+        android:id="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="2"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            app:errorEnabled="true"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:gravity="center"
+                android:id="@+id/my_name"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="enter your name .."
+                android:textColorHint="#EB0505"
+                android:inputType="textAutoComplete" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textview"
+                android:visibility="invisible"
+                android:textAllCaps="true"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="your id: "
+                android:textSize="15dp" />
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/your_ID_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <life.sabujak.roundedbutton.RoundedButton
+            android:id="@+id/GetId_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="24dp"
+            android:text="Get Id"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            app:buttonCornerRadius="20dp"
+            app:buttonGradientEndColor="@color/colorAccent"
+            app:buttonGradientStartColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+
+    <!-- <LinearLayout
+         android:id="@+id/g"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="top"
+         android:orientation="horizontal">
+
+         <TextView
+             android:layout_weight="1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_margin="20dp"
+             android:text="switch your GPS" />
+
+         <it.ngallazzi.fancyswitch.FancySwitch
+             android:layout_weight="3"
+             android:id="@+id/fancySwitch"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="20dp"
+             app:actionOffDrawable="@drawable/ic_location_off_black_24dp"
+             app:actionOnDrawable="@drawable/ic_location_on_black_24dp"
+             app:baseColor="@color/colorPrimaryDark"
+             app:orientation="LANDSCAPE" />
+     </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/friend_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="enter your friend id .."
+                android:inputType="textAutoComplete"
+                android:padding="15dp"
+                android:textColorHint="#EB0505" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/friend_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="enter your friend name .."
+                android:inputType="textAutoComplete"
+                android:padding="15dp"
+                android:textColorHint="#EB0505" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <life.sabujak.roundedbutton.RoundedButton
+            android:id="@+id/go_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="get location"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            app:buttonCornerRadius="20dp"
+            app:buttonGradientEndColor="@color/colorAccent"
+            app:buttonGradientStartColor="@color/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/f"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <life.sabujak.roundedbutton.RoundedButton
+            android:id="@+id/allfriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="See All Friends"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            app:buttonCornerRadius="20dp"
+            app:buttonGradientEndColor="@color/colorAccent"
+            app:buttonGradientStartColor="@color/colorPrimary" />
+    </LinearLayout>
+
+</RelativeLayout>
